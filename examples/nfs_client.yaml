@@ -1,0 +1,15 @@
+metrics:
+  counters:
+  - name: nfs_client_ops
+    labels:
+    - name: op
+      size: 4
+      decoders:
+      - name: uint
+      - name: static_map
+        static_map:
+          0: READ_OPS
+          1: READ_BYTES
+          2: WRITE_OPS
+          3: WRITE_BYTES
+    help: NFS client ops
